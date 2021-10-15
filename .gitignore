@@ -1,6 +1,7 @@
 # Byte-compiled / optimized / DLL files
 envs/
 sean*
+datasets/*txt
 __pycache__/
 __pytorch__/
 *.py[cod]
@@ -63,14 +64,12 @@ main_*.py
 
 *.png
 *.jpg
-*.txt
 
 models/generator_HD.py
 
 *.jpg
 *.png
 *.pkl
-*.txt
 
 #pytorch
 *.pth
