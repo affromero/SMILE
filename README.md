@@ -1,5 +1,5 @@
 
-# SMILE: Semantically-guided Multi-attribute Image and Layout Editing
+# SMILE: Semantically-guided Multi-attribute Image and Layout Editing, ICCVW 2021.
 ## Official PyTorch Implementation 
 ### [[Paper :newspaper:](https://openaccess.thecvf.com/content/ICCV2021W/AIM/html/Romero_SMILE_Semantically-Guided_Multi-Attribute_Image_and_Layout_Editing_ICCVW_2021_paper.html)] &emsp; [[Video :video_camera:](https://youtu.be/KOMdKsJB1ys)] &emsp; [[Poster :scroll:](https://affromero.github.io/SMILE/resources/SMILE_POSTER.pdf)] &emsp; [[Slides :pushpin:](https://affromero.github.io/SMILE/resources/SMILE_slides.ppsx)]
 
