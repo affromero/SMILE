@@ -9,7 +9,7 @@ import random
 from metrics.lpips import LPIPS  # calculate_lpips_given_images
 from metrics.pose_model import Hopenet  # calculate_pose_given_images
 from metrics.attribute_model import AttNet  # calculate_attr_given_images
-from metrics.smile import SMILE
+from metrics.smileSYN import SMILE_SYN as SMILE
 from metrics.f1_score import compute_f1, plot_PR
 from misc.mask_utils import label2mask, label2mask_plain, scatterMask
 from metrics.segmentation_model import MaskNet

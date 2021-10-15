@@ -33,7 +33,7 @@ def base_parser():
     parser.add_argument('--conv_gen', type=int, default=32)
     parser.add_argument('--image_size', type=int, default=256)
     parser.add_argument('--image_size_test', type=int, default=0)
-    parser.add_argument('--batch_size', type=int, default=8)
+    parser.add_argument('--batch_size', type=int, default=4)
     parser.add_argument('--batch_sample', type=int, default=16)
     parser.add_argument('--gen_downscale', type=int, default=4)
     parser.add_argument('--num_workers', type=int, default=4)
@@ -146,7 +146,7 @@ def base_parser():
                         default=False)
     parser.add_argument('--STYLE_SEMANTICS',
                         action='store_true',
-                        default=False)
+                        default=True)
     parser.add_argument('--STYLE_SEMANTICS_ATTR',
                         action='store_true',
                         default=False)

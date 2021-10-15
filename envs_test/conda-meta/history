@@ -1,0 +1,24 @@
+==> 2021-10-15 18:13:22 <==
+# cmd: /scratch_net/schusch/Andres/anaconda3/bin/conda create --prefix ./envs_test python=3.8
+# conda version: 4.8.4
++defaults/linux-64::_libgcc_mutex-0.1-main
++defaults/linux-64::_openmp_mutex-4.5-1_gnu
++defaults/linux-64::ca-certificates-2021.9.30-h06a4308_1
++defaults/linux-64::certifi-2021.10.8-py38h06a4308_0
++defaults/linux-64::ld_impl_linux-64-2.35.1-h7274673_9
++defaults/linux-64::libffi-3.3-he6710b0_2
++defaults/linux-64::libgcc-ng-9.3.0-h5101ec6_17
++defaults/linux-64::libgomp-9.3.0-h5101ec6_17
++defaults/linux-64::libstdcxx-ng-9.3.0-hd4cf53a_17
++defaults/linux-64::ncurses-6.2-he6710b0_1
++defaults/linux-64::openssl-1.1.1l-h7f8727e_0
++defaults/linux-64::pip-21.2.4-py38h06a4308_0
++defaults/linux-64::python-3.8.12-h12debd9_0
++defaults/linux-64::readline-8.1-h27cfd23_0
++defaults/linux-64::setuptools-58.0.4-py38h06a4308_0
++defaults/linux-64::sqlite-3.36.0-hc218d9a_0
++defaults/linux-64::tk-8.6.11-h1ccaba5_0
++defaults/linux-64::xz-5.2.5-h7b6447c_0
++defaults/linux-64::zlib-1.2.11-h7b6447c_3
++defaults/noarch::wheel-0.37.0-pyhd3eb1b0_1
+# update specs: ['python=3.8']
