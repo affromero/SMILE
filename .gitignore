@@ -7,6 +7,7 @@ __pytorch__/
 samples_256/
 *$py.class
 *.swp
+envs*
 *jpg
 demo_*
 gpu.sh
