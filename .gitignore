@@ -1,0 +1,180 @@
+# Byte-compiled / optimized / DLL files
+envs/
+sean*
+__pycache__/
+__pytorch__/
+*.py[cod]
+samples_256/
+*$py.class
+*.swp
+*jpg
+demo_*
+gpu.sh
+*slurm*
+*sbatch*
+*.ckpt
+*.weight
+screen_files/
+Figures/
+*pth*
+reenactment*
+*results
+log/
+*mp4
+create_video
+*.json
+*.xls
+*.xlsx
+*.csv
+*old
+._*
+*.pt
+*sample
+*teaser
+*ablation*
+
+# Datasets
+DeepFashion*
+EmotioNet*
+Image2Season*
+RafD*
+Yosemite*
+BP4D*
+VOC*
+Flickr*
+
+models/perceptual/*
+data/
+datos/
+no_github/
+DFace/
+
+.DS_Store
+._.DS_Store
+*.gif
+samples/
+*.caffemodel
+checkpoint/
+tools/
+tools
+snapshot/
+main_*.py
+
+*.png
+*.jpg
+*.txt
+
+models/generator_HD.py
+
+*.jpg
+*.png
+*.pkl
+*.txt
+
+#pytorch
+*.pth
+*.t7
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# PyInstaller
+#  Usually these files are written by a python script from a template
+#  before PyInstaller builds the exe, so as to inject date/other infos into it.
+*.manifest
+*.spec
+.vscode
+
+#Py data
+*.pickle
+*.npy
+
+# Datasets
+*.h5
+
+.env*
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+
+# Translations
+*.mo
+*.pot
+
+# Django stuff:
+*.log
+local_settings.py
+
+# Flask stuff:
+instance/
+.webassets-cache
+
+# Scrapy stuff:
+.scrapy
+
+# Sphinx documentation
+docs/_build/
+
+# PyBuilder
+target/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# pyenv
+.python-version
+
+# celery beat schedule file
+celerybeat-schedule
+
+# SageMath parsed files
+*.sage.py
+
+# Environments
+.env
+.env1
+.env2
+.venv
+env/
+venv/
+ENV/
+
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# Rope project settings
+.ropeproject
+
+# mkdocs documentation
+/site
+
+# mypy
+.mypy_cache/
