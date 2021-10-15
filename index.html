@@ -1,0 +1,352 @@
+<script src="http://www.google.com/jsapi" type="text/javascript"></script> 
+<script type="text/javascript">google.load("jquery", "1.3.2");</script>
+
+<style type="text/css">
+	body {
+		font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+		font-weight:300;
+		font-size:18px;
+		margin-left: auto;
+		margin-right: auto;
+		width: 1100px;
+	}
+	
+	h1 {
+		font-size:32px;
+		font-weight:300;
+	}
+	
+	.disclaimerbox {
+		background-color: #eee;		
+		border: 1px solid #eeeeee;
+		border-radius: 10px ;
+		-moz-border-radius: 10px ;
+		-webkit-border-radius: 10px ;
+		padding: 20px;
+	}
+
+	video.header-vid {
+		height: 140px;
+		border: 1px solid black;
+		border-radius: 10px ;
+		-moz-border-radius: 10px ;
+		-webkit-border-radius: 10px ;
+	}
+	
+	img.header-img {
+		height: 140px;
+		border: 1px solid black;
+		border-radius: 10px ;
+		-moz-border-radius: 10px ;
+		-webkit-border-radius: 10px ;
+	}
+	
+	img.rounded {
+		border: 1px solid #eeeeee;
+		border-radius: 10px ;
+		-moz-border-radius: 10px ;
+		-webkit-border-radius: 10px ;
+	}
+	
+	a:link,a:visited
+	{
+		color: #1367a7;
+		text-decoration: none;
+	}
+	a:hover {
+		color: #208799;
+	}
+	
+	td.dl-link {
+		height: 160px;
+		text-align: center;
+		font-size: 22px;
+	}
+	
+	.layered-paper-big { /* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
+		box-shadow:
+		0px 0px 1px 1px rgba(0,0,0,0.35), /* The top layer shadow */
+		5px 5px 0 0px #fff, /* The second layer */
+		5px 5px 1px 1px rgba(0,0,0,0.35), /* The second layer shadow */
+		10px 10px 0 0px #fff, /* The third layer */
+		10px 10px 1px 1px rgba(0,0,0,0.35), /* The third layer shadow */
+		15px 15px 0 0px #fff, /* The fourth layer */
+		15px 15px 1px 1px rgba(0,0,0,0.35), /* The fourth layer shadow */
+		20px 20px 0 0px #fff, /* The fifth layer */
+		20px 20px 1px 1px rgba(0,0,0,0.35), /* The fifth layer shadow */
+		25px 25px 0 0px #fff, /* The fifth layer */
+		25px 25px 1px 1px rgba(0,0,0,0.35); /* The fifth layer shadow */
+		margin-left: 10px;
+		margin-right: 45px;
+	}
+
+	.paper-big { /* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
+		box-shadow:
+		0px 0px 1px 1px rgba(0,0,0,0.35); /* The top layer shadow */
+
+		margin-left: 10px;
+		margin-right: 45px;
+	}
+
+
+	.layered-paper { /* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
+		box-shadow:
+		0px 0px 1px 1px rgba(0,0,0,0.35), /* The top layer shadow */
+		5px 5px 0 0px #fff, /* The second layer */
+		5px 5px 1px 1px rgba(0,0,0,0.35), /* The second layer shadow */
+		10px 10px 0 0px #fff, /* The third layer */
+		10px 10px 1px 1px rgba(0,0,0,0.35); /* The third layer shadow */
+		margin-top: 5px;
+		margin-left: 10px;
+		margin-right: 30px;
+		margin-bottom: 5px;
+	}
+	
+	.vert-cent {
+		position: relative;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+	
+	hr
+	{
+		border: 0;
+		height: 1px;
+		background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+	}
+</style>
+
+<html>
+<head>
+	<title> SMILE: Semantically-guided Multi-attribute Image and Layout Editing </title>
+	<meta property="og:image" content="./resources/video_teaser.gif"/> <!-- Facebook automatically scrapes this. Go to https://developers.facebook.com/tools/debug/ if you update and want to force Facebook to rescrape. -->
+	<meta property="og:title" content="Facial Attribube Manipulation Using Random/Exemplar Images" />
+	<meta property="og:description" content="Facial Attribube Manipulation Using Random/Exemplar Images" />
+
+	<!-- Get from Google Analytics -->
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src=""></script> 
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-75863369-6');
+	</script>
+</head>
+
+<body>
+	<br>
+	<center>
+		<span style="font-size:36px">SMILE: Semantically-guided Multi-attribute Image and Layout Editing</span><br>
+		<span style="font-size:25px;line-height:2.0">ICCVW 2021</span><br>
+		<table align=center width=1100px>
+			<table align=center width=1100px>
+				<tr>
+					<td align=center width=250px>
+
+							<span style="font-size:22px"><a href="https://afromero.co/">Andrés Romero</a></span>&nbsp;&nbsp;&nbsp;
+							<span style="font-size:22px"><a href="https://icu.ee.ethz.ch/">Luc Van Gool</a></span>&nbsp;&nbsp;&nbsp;
+							<span style="font-size:22px"><a href="https://people.ee.ethz.ch/~timofter/">Radu Timofte</a></span>&nbsp;&nbsp;&nbsp;
+					</td>
+				</tr>
+			</table>
+			<table align=center width=250px>
+				<tr>
+					<td align=center width=120px>
+						<center>
+							<span style="font-size:24px"><a href='https://openaccess.thecvf.com/content/ICCV2021W/AIM/html/Romero_SMILE_Semantically-Guided_Multi-Attribute_Image_and_Layout_Editing_ICCVW_2021_paper.html'>[Paper]</a></span>
+						</center>
+					</td>
+					
+					<td align=center width=120px>
+						<center>
+							<span style="font-size:24px"><a href='https://github.com/affromero/SMILE'>[Github]</a></span><br>
+						</center>
+					</td>
+
+					<td align=center width=120px>
+						<center>
+							<span style="font-size:24px"><a href='./resources/SMILE_POSTER.pdf'>[Poster]</a></span><br>
+						</center>
+					</td>
+					
+					<td align=center width=120px>
+						<center>
+							<span style="font-size:24px"><a href='./resources/SMILE_slides.ppsx'>[Slides]</a></span><br>
+						</center>
+					</td>					
+					
+				</tr>
+			</table>
+		</table>
+	</center>
+	<br>
+	<center>
+		<table align=center width=850px>
+			<tr>
+				<td width=500px>
+					<center>
+						<img class="round" style="width:900px" src="./resources/video_teaser.gif"/>
+					</center>
+				</td>
+			</tr>
+		</table>
+
+	</center>
+
+	<hr>
+
+	<table align=center width=850px>
+		<center><h1>Abstract</h1></center>
+		<tr>
+			<td>
+				Attribute image manipulation has been a very active topic since the introduction of Generative Adversarial Networks (GANs). Exploring the disentangled attribute space within a transformation is a very challenging task due to the multiple and mutually-inclusive nature of the facial images, where different labels (eyeglasses, hats, hair, identity, etc.) can co-exist at the same time. Several works address this issue either by exploiting the modality of each domain/attribute using a conditional random vector noise, or extracting the modality from an exemplary image. However, existing methods cannot handle both random and reference transformations for multiple attributes, which limits the generality of the solutions. In this paper, we successfully exploit a multimodal representation that handles all attributes, be it guided by random noise or exemplar images, while only using the underlying domain information of the target domain. We present extensive qualitative and quantitative results for facial datasets and several different attributes that show the superiority of our method. Additionally, our method is capable of adding, removing or changing either fine-grained or coarse attributes by using an image as a reference or by exploring the style distribution space, and it can be easily extended to head-swapping and face-reenactment applications without being trained on videos. 
+			</td>
+		</tr>
+	</table>
+	<br>
+	<hr>
+	
+	<center><h1>Video</h1></center>
+        <table align="center" width="700px">
+            <tbody><tr>
+
+                    <td align="center" width="700px">
+			<center>
+			    <iframe width="1120" height="630" src="https://www.youtube.com/embed/KOMdKsJB1ys" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </center>
+                </td>
+        </tr></tbody></table>
+	<hr>
+	
+	<!--
+	<center><h1>Talk</h1></center>
+	<p align="center">
+		<iframe width="660" height="395" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen align="center"></iframe>
+	</p>
+
+	<table align=center width=800px>
+		<br>
+		<tr>
+			<center>
+				<span style="font-size:28px"><a href=''>[Slides]</a>
+				</span>
+			</center>
+		</tr>
+	</table>
+	<hr>
+	-->
+	<center><h1>Method</h1></center>
+
+
+	<table align=center width=600px>
+		<tr>
+			<td align=center width=600px>
+				<center>
+					<td><img class="round" style="width:650px" src="./resources/overview.png"/></td>
+				</center>
+			</td>
+		</tr>
+	</table>
+
+	<br>
+	<hr>
+	<center><h1>Exemplar Attribute Manipulation</h1></center>
+	We show the results of manipulating an input image with respect to reference attributes. <br><br>
+	<table align=center width=1000px>
+  		<tr>
+			<td width=1000px>
+				<center>
+					<td><img class="round" style="width:1000px" src="./resources/out_eyeglasses.gif"/></td>
+				</center>
+			</td>
+		</tr>
+	</table>
+  <table align=center width=1000px>
+	<tr>
+	  <td width=1000px>
+		  <center>
+			  <td><img class="round" style="width:1000px" src="./resources/out_bangs.gif"/></td>
+		  </center>
+	  </td>
+  </tr>
+</table>
+<table align=center width=1000px>
+	<tr>
+	  <td width=1000px>
+		  <center>
+			  <td><img class="round" style="width:1000px" src="./resources/out_hat.gif"/></td>
+		  </center>
+	  </td>
+  </tr>
+</table>  	
+	<br>
+        <hr>
+        <center><h1>More examples on Lip Syncing</h1></center>
+        <table align=center width=1000px>
+                <tr>
+                        <td width=1000px>
+                                <center>
+                                        <td><img class="round" style="width:1000px" src="./resources/out_puppet.gif"/></td>
+                                </center>
+                        </td>
+                </tr>
+        </table>
+
+	<br>
+        <hr>
+        <center><h1>It also works for videos!</h1></center>
+        <table align=center width=1000px>
+                <tr>
+                        <td width=1000px>
+                                <center>
+                                        <td><img class="round" style="width:1000px" src="./resources/out_video.gif"/></td>
+                                </center>
+                        </td>
+                </tr>
+        </table>
+
+	<br>
+	<table align=center width=500px>
+		<center><h1>Paper</h1></center>
+		<tr>
+			<td><a href=""><img class="layered-paper-big" style="height:175px" src="./resources/paper.png"/></a></td>
+			<td><span style="font-size:12pt">Romero, A., Van Gool, L., Timofte, R.
+				<b>SMILE: Semantically-guided Multi-attribute Image and Layout Editing</b><br>
+				ICCVW, 2021.<br>
+				<!-- (hosted on <a href="https://openaccess.thecvf.com/content/ICCV2021W/AIM/html/Romero_SMILE_Semantically-Guided_Multi-Attribute_Image_and_Layout_Editing_ICCVW_2021_paper.html"></a>)<br> -->
+				(<a href="https://openaccess.thecvf.com/content/ICCV2021W/AIM/html/Romero_SMILE_Semantically-Guided_Multi-Attribute_Image_and_Layout_Editing_ICCVW_2021_paper.html">camera ready</a>)<br>
+				<span style="font-size:4pt"><a href=""><br></a>
+				</span>
+			</td>
+		</tr>
+	</table>
+	<br>
+
+	<table align=center width=600px>
+		<tr>
+			<td><span style="font-size:14pt"><center>
+				<a href="./resources/bibtex.txt">[Bibtex]</a>
+			</center></td>
+		</tr>
+	</table>
+
+	<hr>
+	<br>
+
+	<table align=center width=900px>
+		<tr>
+			<td width=400px>
+				<left>
+					<center><h1>Acknowledgements</h1></center>
+					This template was originally made by <a href="http://web.mit.edu/phillipi/">Phillip Isola</a> and <a href="http://richzhang.github.io/">Richard Zhang</a> for a <a href="http://richzhang.github.io/colorization/">colorful</a> ECCV project; the code can be found <a href="https://github.com/richzhang/webpage-template">here</a>.
+				</left>
+			</td>
+		</tr>
+	</table>
+
+<br>
+</body>
+</html>
+

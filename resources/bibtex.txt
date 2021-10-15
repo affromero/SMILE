@@ -1,0 +1,8 @@
+@InProceedings{Romero_2021_ICCV,
+    author    = {Romero, Andres and Van Gool, Luc and Timofte, Radu},
+    title     = {SMILE: Semantically-Guided Multi-Attribute Image and Layout Editing},
+    booktitle = {Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV) Workshops},
+    month     = {October},
+    year      = {2021},
+    pages     = {1924-1933}
+}
