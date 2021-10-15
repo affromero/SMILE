@@ -2,6 +2,7 @@
 envs/
 sean*
 datasets/*txt
+_Figures/
 __pycache__/
 __pytorch__/
 *.py[cod]
